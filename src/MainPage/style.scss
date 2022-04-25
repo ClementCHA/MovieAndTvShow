@@ -1,16 +1,30 @@
-.main{
- 
+.searchPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .searchBar{
+ font-family: Bradley Hand, cursive;  height: 100%;
  margin-top: 2em;
  border: 2px solid black;
- border-radius: 1em;
+ border-radius: 0.8em;
  padding: 1.5em;
- width: 50%;
+ width: 30vw;
  text-align: center;
  font-size: 2vmin;
  letter-spacing: 2px;
  text-transform: uppercase;
+ box-shadow: 5px 21px 20px -11px darken(#f9b6b6fc, 10%);
+}
+
+.submitButton{
+ padding: 1.5em;
+ font-size: 2vmin;
+ 
+}
+
+.submitButton:disabled{
+  cursor: not-allowed;
 }
 .choosePgrm{
   font-family: Bradley Hand, cursive;  height: 100%;
@@ -20,6 +34,7 @@
   letter-spacing: 2px;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
 }
 .title {
    
@@ -42,13 +57,68 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-      text-shadow: 6px 6px rgba(black, 0.4),
+    text-shadow: 6px 6px rgba(black, 0.4),
 
 }
 
 .choices{
   display: flex;
   padding-top: 3em
+}
+
+.cards{
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.card{
+  transition: transform .2s;
+  width: 16%;
+  border: 3px solid black;
+  background-color: rgb(239, 239, 239);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  text-align: center;
+  padding: 0.7em;
+  transform: skew(0deg, -13deg);
+  box-shadow: 2px -1px 0px 0px rgb(245 135 135 / 99%), 0px 4px 0px 0px rgb(245 135 135 / 99%), 4px 0px 0px 0px rgb(245 135 135 / 99%);
+  cursor: pointer;
+}
+
+.card:hover{
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.cardTitle{
+  
+  font-family: Bradley Hand, cursive;
+  letter-spacing: 1px;
+  height: 100%;
+  font-size: 2vmin;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImage{
+ border-radius: 10px;
+ box-shadow: 4px 10px 20px 1px rgba(0, 0, 0, 0.99);  cursor: pointer;
+
+}
+
+.imdNote{
+  border: 1px solid black;
+  padding: 0.5em;
+  border-radius: 50%;
+  box-shadow: 4px 10px 20px 1px rgba(0, 0, 0, 0.99);  cursor: pointer;
+
 }
 
 .choice{
@@ -79,4 +149,29 @@
     box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
     background-color: darken(#f9b6b6fc, 10%);
 
+}
+
+.return{
+  position: absolute;
+  font-family: Bradley Hand, cursive;
+  height: 100%;
+  margin-top: 2em;
+  border: 2px solid black;
+  border-radius: 0.8em;
+  cursor: pointer;
+  right: 1%;
+  top: -1%;
+  background-color: white;
+  height: 5em;
+  width: 12em;
+  white-space: normal;
+  text-align: center;
+  font-size: 2vmin;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 5px 21px 20px -11px rgb(245 135 135 / 99%);
+}
+.return:active {
+  
+  transform: translateY(4px);
 }

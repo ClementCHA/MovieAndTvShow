@@ -20,9 +20,6 @@ body {
 }
 
 .app{
-  background-image: url("../../public/black\ website\ background\ Desktop\ Backgrounds\ for\ HD\ Wallpaper.jpg");
-  height: 100vh;
-  background-size: cover; /* or contain depending on what you want */
-  background-position: center center;
-  background-repeat: no-repeat;
+  height: 100%;
+background: linear-gradient(#232526, #414345)
 }
